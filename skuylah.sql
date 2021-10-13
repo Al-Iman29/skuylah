@@ -50,7 +50,7 @@ CREATE TABLE student (
   class_id int NOT NULL,
   student_name varchar(255) NOT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT fk_class
+  CONSTRAINT fk_student
   FOREIGN KEY (class_id)
   REFERENCES class(id)
     ON UPDATE CASCADE
