@@ -1,11 +1,8 @@
-
--- Database: skuylah
-
 CREATE TABLE user (
   id int NOT NULL AUTO_INCREMENT,
   username varchar(255) NOT NULL,
   password varchar(255) NOT NULL,
-  PRIMARY KEY (user_id)
+  PRIMARY KEY (id)
 );
 
 INSERT INTO user VALUES (1,'admin','admin');
@@ -36,7 +33,7 @@ CREATE TABLE lessons (
   PRIMARY KEY (id),
   CONSTRAINT fk_teacher
   FOREIGN KEY (teacher_id)
-  REFERENCES teacher(teacher_id)
+  REFERENCES teacher(id)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
   CONSTRAINT fk_class
